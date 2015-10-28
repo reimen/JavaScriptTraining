@@ -11,6 +11,7 @@ describe('ステージ1（意図した DOM 要素を取得できるようにな�
       // このステージでは DOM 要素の取得を学びます。
       // 'change me!' を document.getElementById(elementId) に
       // 書き換え、ブラウザをリロードしてみてください。
+      // 補足: document.getElementById ... id属性で要素を取得します
       var elementId = 'firebrick';
       var element = 'change me!';
 
@@ -40,6 +41,7 @@ describe('ステージ1（意図した DOM 要素を取得できるようにな�
     it('3 番の緑色の要素（CSS クラス名は "mediumseagreen"）が1つ取得できる', function() {
 
       // 'change me!' を書き換えてください。
+      // ヒント: document.getElementsByClassName ... class属性で要素を取得する（戻り値は配列）
       var elementClassName = 'mediumseagreen';
       var elements = 'change me!';
 
@@ -69,6 +71,7 @@ describe('ステージ1（意図した DOM 要素を取得できるようにな�
     it('5 番の青色の要素（タグ名は "blockquote"）が1つ取得できる', function() {
 
       // 'change me!' を書き換えてください。
+      // ヒント: document.getElementsByTagName ... タグ名で要素を取得する（戻り値は配列）
       var elementTagName = 'blockquote';
       var elements = 'change me!';
 
@@ -122,7 +125,7 @@ describe('ステージ1（意図した DOM 要素を取得できるようにな�
 
       // 'change me!' を書き換えてください。
       var elements = 'change me!';
-
+      
       expect(elements).to.have.length(2);
       expect(elements[0]).to.have.property(secret('pynffAnzr'), secret('zrqvhzghedhbvfr'));
       expect(elements[1]).to.have.property(secret('pynffAnzr'), secret('zrqvhzghedhbvfr'));
@@ -152,6 +155,7 @@ describe('ステージ1（意図した DOM 要素を取得できるようにな�
       //
       // 'change me!' を document.querySelector('#firebrick') に
       // 書き換えてください。
+      // 補足 document.querySelector ... セレクタで要素を取得する
       var element = 'change me!';
 
       expect(element).to.have.property(secret('vq'), secret('sveroevpx'));
@@ -205,6 +209,7 @@ describe('ステージ1（意図した DOM 要素を取得できるようにな�
     it('6 番の紫色の要素を querySelector を使って1つ取得できる', function() {
 
       // 'change me!' を書き換えてください。
+      // ヒント: '[属性名=値]' というセレクタがある（例: [type=text] ... type属性がtextの要素を取得する
       var element = 'change me!';
 
       expect(element).to.have.deep.property(secret('qngnfrg.wfGenvavat'),
@@ -220,6 +225,7 @@ describe('ステージ1（意図した DOM 要素を取得できるようにな�
       //
       // 'change me!' を '.js-training:nth-child(2) li'
       // に書き換えてください。
+      // :nth-child(2) ... 2番目の要素を取得する
       var selector = 'change me!';
 
       var element = document.querySelector(selector);
@@ -245,6 +251,8 @@ describe('ステージ1（意図した DOM 要素を取得できるようにな�
     it('12 番の紫色の要素を、属性セレクタと :nth-child(N) セレクタを使わずに1つ取得できる', function() {
 
       // 'change me!' を書き換えてください。
+      // 補足: 少し難しいので、この問題は飛ばしてしまってもかまいません。
+      // ヒント: 最後の要素を得る :last-child
       var selector = 'change me!';
 
       var element = document.querySelector(selector);
@@ -265,6 +273,8 @@ describe('ステージ1（意図した DOM 要素を取得できるようにな�
       // 基本的な使い方は document.querySelectorAll と同じです。
       //
       // 'change me!' を $('#brown') に書き換えてください。
+      // 補足: jQueryで取得した要素はDOMのAPIで取得した要素とは別物です。それを区別するために、
+      //      jQueryで取得した要素を格納する変数名の先頭には ""$（ダラー）"" を付ける風習があります
       var $element = 'change me!';
 
       expect($element).to.be.instanceof(jQuery);

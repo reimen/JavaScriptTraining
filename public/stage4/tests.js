@@ -51,6 +51,7 @@ describe('ステージ4（意図通りにイベントを利用できる）', fun
     it('3 番の要素の click イベントで要素を 10 度ずつ回転できる', function() {
 
       // ここにコードを記述してください。
+      // ヒント: 現在の角度を変数にとっておけば・・・
 
 
       var mediumseagreen = document.querySelector('.mediumseagreen');
@@ -67,6 +68,8 @@ describe('ステージ4（意図通りにイベントを利用できる）', fun
     it('4 番の要素を入力された角度に回転できる', function() {
 
       // ここにコードを記述してください。
+      // ヒント: $(this)とすることでイベントの対象になっている要素を取得できます。
+      // ヒント: input要素の入力値は「input.value」で取得できます（jQueryでは「$element.val()」）
 
 
       var turquoise = document.querySelector('.turquoise');
@@ -92,6 +95,7 @@ describe('ステージ4（意図通りにイベントを利用できる）', fun
       //
       // なお、expect(steelblue).to.be.null は上記のテストの要件を満たして
       // いないので、正解ではありません。
+      // ヒント: この時点で読み込まれていないDOM要素は操作できないことに注意
 
       var steelblue = document.querySelector('.steelblue');
       expect(steelblue).to.have.property('textContent', '5 \uD83D\uDC33');

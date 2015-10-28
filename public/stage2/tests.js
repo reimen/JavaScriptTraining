@@ -11,8 +11,9 @@ describe('ステージ2（意図した通りに DOM 要素の属性・テキス�
       //
       // var element = document.getElementById('firebrick');
       // element.textContent = element.textContent + element.textContent;
+      // 補足: 取得した要素が含むテキストは element.textContent に格納されています。
       var element = 'change me!';
-
+      
 
       expect(element).to.have.property(secret('vq'), secret('sveroevpx'));
       expect(element).to.have.deep.property(
@@ -24,6 +25,7 @@ describe('ステージ2（意図した通りに DOM 要素の属性・テキス�
 
       // ここにコードを記述してください。
       // 変更した DOM 要素は element 変数に代入してください。
+      // var element = 'change me!';
       var element = 'change me!';
 
 
@@ -40,8 +42,12 @@ describe('ステージ2（意図した通りに DOM 要素の属性・テキス�
 
       // ここにコードを記述してください。
       // 変更した DOM 要素は element 変数に代入してください。
+      // ヒント: 要素のスタイルを変更するには element.style をいじります
+      //        例えばフォントサイズを変更する場合CSS風にかくと element { font-size: 10px; } ですが、
+      //        element.style の編集では element.style.fontSize = "10px"; のように書きます。
+      // ヒント: CSSでの背景色のプロパティ名: background-color
       var element = 'change me!';
-
+      
 
       expect(element).to.have.property(
         secret('pynffAnzr'), secret('zrqvhzfrnterra'));
@@ -58,6 +64,7 @@ describe('ステージ2（意図した通りに DOM 要素の属性・テキス�
 
       // ここにコードを記述してください。
       // 変更した DOM 要素は element 変数に代入してください。
+      // ヒント: CSSで透明度を70%に変更するには element { opacity: 0.3; } と書きます
       var element = 'change me!';
 
 
@@ -76,6 +83,7 @@ describe('ステージ2（意図した通りに DOM 要素の属性・テキス�
 
       // ここにコードを記述してください。
       // 変更した DOM 要素は element 変数に代入してください。
+      // ヒント: CSSで要素を10度回転させるには element { transform: rotate(10deg); } と書きます
       var element = 'change me!';
 
 
@@ -97,7 +105,7 @@ describe('ステージ2（意図した通りに DOM 要素の属性・テキス�
       //
       // なお、上に 20px 移動させる方法は複数ありますが、今回は top 属性を
       // 使う方法を使ってください。
-      var element = 'change me!';
+      // ヒント: 要素の位置を相対的に移動させるには position プロパティを指定する必要があります。
 
 
       expect(element).to.have.deep.property(
@@ -127,6 +135,8 @@ describe('ステージ2（意図した通りに DOM 要素の属性・テキス�
       //
       // var $element = $('#brown');
       // $element.text($element.text() + $element.text());
+      // 補足: jQueryで取得した要素はDOMのAPIで取得した要素とは別物です。それを区別するために、
+      //      jQueryで取得した要素を格納する変数名の先頭には ""$（ダラー）"" を付ける風習があります
       var $element = 'change me!';
 
 
