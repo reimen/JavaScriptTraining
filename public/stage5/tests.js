@@ -127,7 +127,11 @@ describe('ステージ5（意図通りに非同期処理を利用できる）', 
     it('Github の mixi-inc の organization の情報を取得できる', function() {
 
       // 作成した promise を mixiOrg 変数に代入してください。
-      var mixiOrg = 'change me!';
+      // var mixiOrg = 'change me!';
+      var mixiOrg = fetch('https://api.github.com/orgs/mixi-inc')
+        .then(function(response) {
+          return response.json();
+        });
 
       return expect(mixiOrg).to.eventually.have.property('id', 1089312);
 
